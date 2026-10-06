@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customizable Pac-Man</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Pac-Man</h1>
+        
+        <div class="controls-panel">
+            <div class="upload-section">
+                <label for="custom-image" class="custom-file-upload">
+                    Upload Custom Pac-Man Image
+                </label>
+                <input type="file" id="custom-image" accept="image/*">
+                <button id="reset-image" class="btn">Reset to Default</button>
+            </div>
+            
+            <div class="setting-section">
+                <label for="speed-select" class="speed-label">Speed:</label>
+                <select id="speed-select" class="speed-select">
+                    <option value="1">Slow (Kids Mode)</option>
+                    <option value="2" selected>Normal</option>
+                    <option value="4">Fast</option>
+                </select>
+            </div>
+
+            <div class="score-display">Score: <span id="score-value">0</span></div>
+        </div>
+
+        <canvas id="gameCanvas" width="420" height="420"></canvas>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
